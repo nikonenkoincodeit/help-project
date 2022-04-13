@@ -1,0 +1,240 @@
+:root {
+  --main-color: #212121;
+  --secondary-color: #fff;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #e5e5e5;
+  color: var(--main-color);
+  min-width: 360px;
+  font-size: 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.hidden-title {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  margin: -1px;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-btn {
+  padding: 10px 23px;
+  background: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: calc(30 / 25);
+  text-align: center;
+}
+.hero-subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  text-align: center;
+}
+
+.section {
+  padding: 15px 0;
+}
+
+.field {
+  padding-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  background: var(--secondary-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 15px 20px;
+}
+
+.form-control:hover,
+.form-control:focus {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 20px rgba(75, 151, 253, 0.5);
+}
+
+.form-control::placeholder {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c4c4c4;
+}
+
+.crete-btn,
+.form-btn {
+  background: #151414;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: calc(18 / 15);
+  padding: 17px;
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+
+.form-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.crete-btn {
+  padding: 15px 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.box-bg {
+  background: linear-gradient(256.03deg, #4b97fd 0%, #0f4ce8 100%);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 25px 15px;
+  color: var(--secondary-color);
+}
+
+.instruction {
+  margin-top: 55px;
+  position: relative;
+}
+
+.instruction::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 62px;
+  height: 79px;
+  transform: translateX(-50%);
+  background: url(../img/svg/thoughtful-girl.svg) no-repeat center;
+}
+
+.instruction-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  margin-bottom: 30px;
+}
+
+.instruction-text {
+  margin-bottom: 20px;
+}
+.instruction-ps {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cart {
+  padding: 12px 20px;
+  background: var(--secondary-color);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-content {
+  padding-left: 20px;
+}
+.cart-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  margin-bottom: 7px;
+}
+
+.cart-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+}
+
+.info {
+  padding-left: 10%;
+}
+
+.info-cart {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.info-text {
+  padding-left: 20px;
+}
+
+.wrapper-img {
+  display: flex;
+  justify-content: center;
+}
+
+.start-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 25px;
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  background: transparent;
+}
+
+.footer {
+  padding: 15px 0;
+  text-align: center;
+  line-height: calc(18 / 15);
+}
+
+.footer-text {
+  margin-bottom: 17px;
+}
+.link-telegram {
+  color: #0f4ce8;
+  text-decoration: revert;
+  font-weight: 500;
+}
+.footer-subtext {
+  color: #c4c4c4;
+}
