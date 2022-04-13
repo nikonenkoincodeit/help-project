@@ -1,10 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Travers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-row">
+          <a href="/" class="logo">
+            <img src="./img/svg/logo.svg" width="75" alt="logo" />
+          </a>
+          <button type="button" class="header-btn">Створити сторінку</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="error section">
+        <div class="container">
+          <h1 class="error-title">404</h1>
+          <p class="error-subtitle">
+            Скоріше за все у вас невірне посилання. Якщо ви забули його —
+            створіть нову сторінку.
+          </p>
+        </div>
+      </section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Степан Бандера</h1>
+          <p class="hero-subtitle">
+            Збирає кошти на Допомогу ЗСУ та шоломи для бригади 22
+          </p>
+        </div>
+      </section>
+
+      <section class="section-form section">
+        <h2 class="hidden-title">form section</h2>
+        <div class="container">
+          <div class="field">
+            <input
+              type="text"
+              placeholder="Копіювати реквізити"
+              class="form-control"
+              name="string"
+            />
+          </div>
+          <div class="field mar-bot20">
+            <button class="copy-btn" type="button">Копіювати реквізити</button>
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              placeholder="Копіювати посилання на сторінку"
+              class="form-control"
+              name="user-name"
+            />
+          </div>
+          <button class="copy-btn" type="button">
+            Копіювати посилання на сторінку
+          </button>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="instruction box-bg girl">
+            <h2 class="instruction-title">
+              Створіть власну сторінку із реквізитами для донатів
+              <span class="flag"></span> і опублікуйте її у соцмережах
+            </h2>
+            <p class="list-title">Чому це круто:</p>
+            <ul class="list">
+              <li class="list-item">
+                донат прийде 100% за реквізитами, бо дані копіюються
+              </li>
+              <li class="list-item">
+                читачам не потрібно переписувати номер картки із, наприклад,
+                ваших сторіс інстаграм
+              </li>
+              <li class="list-item">
+                ви спрощуєте можливість донату, а одже — швидше збираєте
+                потрібну суму
+              </li>
+            </ul>
+            <a href="./index.html" class="crete-btn link">Створити сторінку</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          Залишились питання, пропозиції або щось не працює? Напишіть нам в
+          <a href="" class="link-telegram">Телеграм</a>
+        </p>
+        <p class="footer-subtext" lang="en">&copy; 2022, Travers</p>
+      </div>
+    </footer>
+
+    <div class="alert">
+      <img src="./img/checkbox.png" width="35" alt="checkbox" />
+      <div class="alert-content">
+        <p class="alert-title">Посилання скопійовано!</p>
+        <p class="alert-text">Тепер ви можете поділитися ним у соцмережах.</p>
+      </div>
+      <button type="button" class="alert-btn"></button>
+    </div>
+  </body>
 </html>

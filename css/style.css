@@ -17,6 +17,10 @@ body {
   margin: 0 auto;
 }
 
+.mar-bot20 {
+  margin-bottom: 20px;
+}
+
 .hidden-title {
   width: 1px;
   height: 1px;
@@ -49,7 +53,30 @@ body {
   font-size: 25px;
   line-height: calc(30 / 25);
   text-align: center;
+  padding-right: 23px;
 }
+
+.hero-flag {
+  position: relative;
+}
+.hero-flag::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: -23px;
+  background: url(../img/svg/flag.svg) no-repeat center;
+}
+
+.flag {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  background: url(../img/svg/flag.svg) no-repeat center;
+}
+
 .hero-subtitle {
   font-weight: 300;
   font-size: 18px;
@@ -91,6 +118,7 @@ body {
   color: #c4c4c4;
 }
 
+.copy-btn,
 .crete-btn,
 .form-btn {
   background: #151414;
@@ -102,9 +130,14 @@ body {
   line-height: calc(18 / 15);
   padding: 17px;
   color: var(--secondary-color);
+}
+
+.crete-btn,
+.form-btn {
   margin-top: 20px;
 }
 
+.copy-btn,
 .form-btn {
   width: 100%;
   text-align: center;
@@ -114,6 +147,12 @@ body {
   padding: 15px 30px;
   display: block;
   margin: 0 auto;
+}
+
+.crete-btn.link {
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .box-bg {
@@ -138,6 +177,10 @@ body {
   height: 79px;
   transform: translateX(-50%);
   background: url(../img/svg/thoughtful-girl.svg) no-repeat center;
+}
+
+.girl::after {
+  background: url(../img/girl-in-love.png) no-repeat center;
 }
 
 .instruction-title {
@@ -237,4 +280,80 @@ body {
 }
 .footer-subtext {
   color: #c4c4c4;
+}
+
+.list {
+  list-style: revert;
+  padding: 0 20px 30px 20px;
+}
+
+.list-title,
+.list-item {
+  margin-bottom: 10px;
+}
+
+.error-title {
+  font-weight: 700;
+  font-size: 140px;
+  line-height: calc(169 / 140);
+  text-align: center;
+}
+
+.error-subtitle {
+  line-height: calc(18 / 15);
+  text-align: center;
+  padding: 0 10%;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background: #fff;
+  padding: 15px 78px 15px 15px;
+  width: calc(100vw - 30px);
+  max-width: 570px;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #c4c4c4;
+  overflow: hidden;
+}
+
+.alert-content {
+  padding-left: 15px;
+}
+
+.alert-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+}
+
+.alert-text {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: calc(11 / 9);
+}
+
+.alert-btn {
+  height: 68px;
+  width: 68px;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #c4c4c4;
+}
+
+.alert-btn::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/svg/close.svg) no-repeat center;
 }
