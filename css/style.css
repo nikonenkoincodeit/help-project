@@ -150,9 +150,10 @@ body {
 }
 
 .crete-btn.link {
-  display: inline-block;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
   white-space: nowrap;
 }
 
