@@ -21,7 +21,9 @@
           <a href="/" class="logo">
             <img src="./img/svg/logo.svg" width="75" alt="logo" />
           </a>
-          <button type="button" class="header-btn">Створити сторінку</button>
+          <button type="button" class="header-btn js-scroll-btn">
+            Створити сторінку
+          </button>
         </div>
       </div>
     </header>
@@ -38,32 +40,32 @@
           </p>
         </div>
       </section>
-      <section class="section-form section">
+      <section class="js-section-form section">
         <h2 class="hidden-title">form section</h2>
         <div class="container">
-          <form class="form">
+          <form class="form js-form">
             <div class="field">
               <input
                 type="text"
                 placeholder="Номер картки, IBAN або будь-що, що потрібно буде скопіювати..."
-                class="form-control"
-                name="string"
+                class="form-control js-form-control"
+                name="details"
               />
             </div>
             <div class="field">
               <input
                 type="text"
                 placeholder="На що збираєте кошти, наприклад: “Закупівлю броників”..."
-                class="form-control"
-                name="purpose"
+                class="form-control js-form-control"
+                name="reason_raise"
               />
             </div>
             <div class="field">
               <input
                 type="text"
                 placeholder="Імя, для відображення на сторінці..."
-                class="form-control"
-                name="user-name"
+                class="form-control js-form-control"
+                name="name"
               />
             </div>
             <button class="form-btn" type="submit">Створити сторінку</button>
@@ -93,7 +95,7 @@
           <ul>
             <li>
               <div class="cart">
-                <img src="./img/svg/money.svg" alt="money" width="50" />
+                <img src="./img/money.png" alt="money" width="50" />
                 <div class="cart-content">
                   <h3 class="cart-title">Ефективно</h3>
                   <p class="cart-text">
@@ -105,7 +107,11 @@
             </li>
             <li>
               <div class="cart">
-                <img src="./img/svg/hand.svg" alt="money" width="50" />
+                <img
+                  src="./img/crossed-fingers_light-skin-tone.png"
+                  alt="money"
+                  width="50"
+                />
                 <div class="cart-content">
                   <h3 class="cart-title">Без помилок</h3>
                   <p class="cart-text">
@@ -117,7 +123,7 @@
             </li>
             <li>
               <div class="cart">
-                <img src="./img/svg/fire.svg" alt="money" width="50" />
+                <img src="./img/fire.png" alt="money" width="50" />
                 <div class="cart-content">
                   <h3 class="cart-title">Зручно</h3>
                   <p class="cart-text">
@@ -129,7 +135,7 @@
             </li>
             <li>
               <div class="cart">
-                <img src="./img/svg/car.svg" alt="money" width="50" />
+                <img src="./img/rocket.png" alt="money" width="50" />
                 <div class="cart-content">
                   <h3 class="cart-title">Швидко</h3>
                   <p class="cart-text">
@@ -149,7 +155,8 @@
             <ul class="info">
               <li>
                 <div class="info-cart">
-                  <img src="./img/svg/smile-girl.svg" alt="girl" width="50" />
+                  <!-- <img src="./img/svg/smile-girl.svg" alt="girl" width="80" /> -->
+                  <img src="./img/svg/g2913.svg" alt="girl" width="80" />
                   <p class="info-text">
                     1. Додайте реквізити для донату для донату
                   </p>
@@ -157,20 +164,23 @@
               </li>
               <li>
                 <div class="info-cart">
-                  <img src="./img/svg/girl.svg" alt="girl" width="50" />
+                  <img src="./img/svg/g2313.svg" alt="girl" width="80" />
                   <p class="info-text">2. Отримайте унікальне посилання</p>
                 </div>
               </li>
               <li>
                 <div class="info-cart">
-                  <img src="./img/svg/girl-in-love.svg" alt="girl" width="50" />
+                  <!-- <img src="./img/svg/girl-in-love.svg" alt="girl" width="80" /> -->
+                  <img src="./img/svg/g813.svg" alt="girl" width="80" />
                   <p class="info-text">
                     3. Розмістіть посилання на сторінку профіля або у сторіс
                   </p>
                 </div>
               </li>
             </ul>
-            <button class="crete-btn" type="button">Створити сторінку</button>
+            <button class="crete-btn js-scroll-btn" type="button">
+              Створити сторінку
+            </button>
           </div>
         </div>
       </section>
@@ -178,9 +188,11 @@
         <h2 class="section-title">Ваша сторінка виглядатиме так</h2>
         <div class="container">
           <div class="wrapper-img">
-            <img src="./img/phone.png" width="345" alt="phone" />
+            <img src="./img/frame.png" width="345" alt="phone" />
           </div>
-          <button type="button" class="start-btn">Почати збирати донати</button>
+          <button type="button" class="start-btn js-scroll-btn">
+            Почати збирати донати
+          </button>
         </div>
       </section>
     </main>
@@ -193,5 +205,18 @@
         <p class="footer-subtext" lang="en">&copy; 2022, Travers</p>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.6.3/firebase-database.min.js"
+      integrity="sha512-7MJXjSb+rJ5BVhYwqrqezVRkAwgd+tyO6mLPlgrzIZxfJCPF3ZCQAsHLQfBP4KXnqvGL8gJuk12F5cAUDFUa7g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/script.js" defer type="module"></script>
   </body>
 </html>

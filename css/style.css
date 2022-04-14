@@ -2,6 +2,13 @@
   --main-color: #212121;
   --secondary-color: #fff;
 }
+
+html,
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 body {
   font-family: "Inter", sans-serif;
   background: #e5e5e5;
@@ -43,6 +50,7 @@ body {
   padding: 10px 23px;
   background: transparent;
   border: 1px solid var(--main-color);
+  color: var(--main-color);
   border-radius: 15px;
   font-weight: 500;
   font-size: 12px;
@@ -175,14 +183,20 @@ body {
   position: absolute;
   top: -50px;
   left: 50%;
-  width: 62px;
-  height: 79px;
+  width: 80px;
+  height: 80px;
   transform: translateX(-50%);
-  background: url(../img/svg/thoughtful-girl.svg) no-repeat center;
+  /* background: url(../img/svg/thoughtful-girl.svg) no-repeat center; */
+  background: url(../img/svg/g2113.svg) no-repeat center;
+  background-size: cover;
 }
 
 .girl::after {
-  background: url(../img/girl-in-love.png) no-repeat center;
+  /* background: url(../img/girl-in-love.png) no-repeat center; */
+  width: 90px;
+  height: 90px;
+  background: url(../img/svg/g813.svg) no-repeat center;
+  background-size: cover;
 }
 
 .instruction-title {
@@ -236,7 +250,7 @@ body {
 }
 
 .info {
-  padding-left: 10%;
+  padding-left: 8%;
 }
 
 .info-cart {
@@ -246,7 +260,7 @@ body {
 }
 
 .info-text {
-  padding-left: 20px;
+  padding-left: 1px;
 }
 
 .wrapper-img {
@@ -358,4 +372,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: url(../img/svg/close.svg) no-repeat center;
+}
+
+.error-style {
+  box-shadow: 0px 0px 20px rgba(228, 17, 17, 0.5);
+}
+
+.hidden {
+  display: none;
 }

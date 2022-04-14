@@ -21,12 +21,12 @@
           <a href="/" class="logo">
             <img src="./img/svg/logo.svg" width="75" alt="logo" />
           </a>
-          <button type="button" class="header-btn">Створити сторінку</button>
+          <a href="./index.html" class="header-btn">Створити сторінку</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="error section">
+      <section class="error section js-error hidden">
         <div class="container">
           <h1 class="error-title">404</h1>
           <p class="error-subtitle">
@@ -35,42 +35,48 @@
           </p>
         </div>
       </section>
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">Степан Бандера</h1>
-          <p class="hero-subtitle">
-            Збирає кошти на Допомогу ЗСУ та шоломи для бригади 22
-          </p>
-        </div>
-      </section>
 
-      <section class="section-form section">
-        <h2 class="hidden-title">form section</h2>
-        <div class="container">
-          <div class="field">
-            <input
-              type="text"
-              placeholder="Копіювати реквізити"
-              class="form-control"
-              name="string"
-            />
+      <div class="hidden js-main-section">
+        <section class="hero js-hero">
+          <div class="container">
+            <h1 class="hero-title js-hero-title">Степан Бандера</h1>
+            <p class="hero-subtitle js-hero-subtitle">
+              Збирає кошти на Допомогу ЗСУ та шоломи для бригади 22
+            </p>
           </div>
-          <div class="field mar-bot20">
-            <button class="copy-btn" type="button">Копіювати реквізити</button>
+        </section>
+
+        <section class="section-form section">
+          <h2 class="hidden-title">form section</h2>
+          <div class="container">
+            <div class="field">
+              <input
+                type="text"
+                placeholder="Копіювати реквізити"
+                class="form-control js-details-input"
+                name="id"
+              />
+            </div>
+            <div class="field mar-bot20">
+              <button class="copy-btn js-copy-details" type="button">
+                Копіювати реквізити
+              </button>
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                placeholder="Копіювати посилання на сторінку"
+                class="form-control js-url-input"
+                name="url"
+              />
+            </div>
+            <button class="copy-btn js-copy-url" type="button">
+              Копіювати посилання на сторінку
+            </button>
           </div>
-          <div class="field">
-            <input
-              type="text"
-              placeholder="Копіювати посилання на сторінку"
-              class="form-control"
-              name="user-name"
-            />
-          </div>
-          <button class="copy-btn" type="button">
-            Копіювати посилання на сторінку
-          </button>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section class="section">
         <div class="container">
           <div class="instruction box-bg girl">
@@ -108,13 +114,26 @@
       </div>
     </footer>
 
-    <div class="alert">
+    <div class="alert js-alert" style="display: none">
       <img src="./img/checkbox.png" width="35" alt="checkbox" />
       <div class="alert-content">
         <p class="alert-title">Посилання скопійовано!</p>
         <p class="alert-text">Тепер ви можете поділитися ним у соцмережах.</p>
       </div>
-      <button type="button" class="alert-btn"></button>
+      <button type="button" class="alert-btn js-alert-btn"></button>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.6.3/firebase-database.min.js"
+      integrity="sha512-7MJXjSb+rJ5BVhYwqrqezVRkAwgd+tyO6mLPlgrzIZxfJCPF3ZCQAsHLQfBP4KXnqvGL8gJuk12F5cAUDFUa7g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/page.js" defer type="module"></script>
   </body>
 </html>
