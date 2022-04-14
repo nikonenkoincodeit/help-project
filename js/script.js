@@ -52,6 +52,11 @@ function checkForm() {
   return false;
 }
 
+console.log(
+  ' location.href = location.pathname + "/page.html?id="  :>> ',
+  (location.href = location.pathname + "/page.html?id=")
+);
+
 function sendDataFirebase(data) {
   try {
     const playersRef = firebase.database().ref("events/");
