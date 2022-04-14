@@ -54,7 +54,7 @@ function checkForm() {
 
 console.log(
   ' location.href = location.pathname + "/page.html?id="  :>> ',
-  (location.href = location.pathname + "/page.html?id=")
+  location.href + location.pathname + "page.html?id="
 );
 
 function sendDataFirebase(data) {
@@ -62,7 +62,8 @@ function sendDataFirebase(data) {
     const playersRef = firebase.database().ref("events/");
 
     playersRef.push(data).then((data) => {
-      location.href = location.pathname + "/page.html?id=" + data.key;
+      location.href =
+        location.href + location.pathname + "page.html?id=" + data.key;
     });
   } catch (error) {
     console.log(error);
