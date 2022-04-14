@@ -26,7 +26,7 @@ formRef.on("submit", (e) => {
   e.preventDefault();
   const result = checkForm();
   if (result) {
-    return result.classList.add("error");
+    return result.classList.add("error-style");
   }
 
   const formData = new FormData(e.target);
