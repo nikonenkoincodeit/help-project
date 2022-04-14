@@ -41,6 +41,11 @@ const detailsRef = $(".js-details-input");
 const urlInputRef = $(".js-url-input");
 const href = location.href;
 
+console.log("location.href :>> ", location.href);
+console.log("location.host :>> ", location.host);
+console.log("location.hostname :>> ", location.hostname);
+console.log("location.pathname :>> ", location.pathname);
+
 function checkAnswer(data) {
   if (!data) return removeClassElem(errorRef);
   removeClassElem(mainSectionRef);
