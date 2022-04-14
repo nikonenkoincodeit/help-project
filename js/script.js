@@ -57,7 +57,7 @@ function sendDataFirebase(data) {
     const playersRef = firebase.database().ref("events/");
 
     playersRef.push(data).then((data) => {
-      location.href = "/page.html?id=" + data.key;
+      location.href = location.pathname + "/page.html?id=" + data.key;
     });
   } catch (error) {
     console.log(error);
