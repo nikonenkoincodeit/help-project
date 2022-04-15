@@ -60,14 +60,18 @@ function checkAnswer(data) {
 }
 
 const copyDetailsRef = $(".js-copy-details");
+const alertTitleRef = $(".js-alert-title");
 const alertTextRef = $(".js-alert-text");
 const copyUrlRef = $(".js-copy-url");
 
 const message1 = "Тепер ви можете поділитися ним у соцмережах.";
 const message2 = "Тепер ви можете зробити переказ за вірними реквізитами.";
+const title1 = "Посилання скопійовано!";
+const title2 = "Реквізити скопійовані!";
 
 copyDetailsRef.on("click", () => {
   alertTextRef.text(message2);
+  alertTitleRef.text(title2);
   alertRef.fadeIn(500);
   copyText(detailsRef);
   hideAlert();
@@ -75,6 +79,7 @@ copyDetailsRef.on("click", () => {
 
 copyUrlRef.on("click", () => {
   alertTextRef.text(message1);
+  alertTitleRef.text(title1);
   alertRef.fadeIn(500);
   copyText(urlInputRef);
   hideAlert();
