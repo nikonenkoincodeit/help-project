@@ -61,7 +61,6 @@ body {
   font-size: 25px;
   line-height: calc(30 / 25);
   text-align: center;
-  padding-right: 23px;
 }
 
 .hero-flag {
@@ -85,11 +84,16 @@ body {
   background: url(../img/svg/flag.svg) no-repeat center;
 }
 
+.hero-text,
 .hero-subtitle {
   font-weight: 300;
   font-size: 18px;
   line-height: calc(22 / 18);
   text-align: center;
+}
+
+.hero-text {
+  margin-bottom: 5px;
 }
 
 .section {
@@ -204,6 +208,7 @@ body {
   font-size: 18px;
   line-height: calc(22 / 18);
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .instruction-text {

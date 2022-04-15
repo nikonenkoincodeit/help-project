@@ -11,6 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .box-spinier {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.7;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -40,6 +52,7 @@
         <section class="hero js-hero">
           <div class="container">
             <h1 class="hero-title js-hero-title">Степан Бандера</h1>
+            <p class="hero-text">збирає кошти на</p>
             <p class="hero-subtitle js-hero-subtitle">
               Збирає кошти на Допомогу ЗСУ та шоломи для бригади 22
             </p>
@@ -108,7 +121,9 @@
       <div class="container">
         <p class="footer-text">
           Залишились питання, пропозиції або щось не працює? Напишіть нам в
-          <a href="" class="link-telegram">Телеграм</a>
+          <a href="https://t.me/kravchukk" class="link-telegram" target="_blank"
+            >Телеграм</a
+          >
         </p>
         <p class="footer-subtext" lang="en">&copy; 2022, Travers</p>
       </div>
@@ -118,10 +133,17 @@
       <img src="./img/checkbox.png" width="35" alt="checkbox" />
       <div class="alert-content">
         <p class="alert-title">Посилання скопійовано!</p>
-        <p class="alert-text">Тепер ви можете поділитися ним у соцмережах.</p>
+        <p class="alert-text js-alert-text">
+          Тепер ви можете поділитися ним у соцмережах.
+        </p>
       </div>
       <button type="button" class="alert-btn js-alert-btn"></button>
     </div>
+
+    <div class="box-spinier js-box-spinier">
+      <img src="./img/spinner.gif" alt="spinner" />
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

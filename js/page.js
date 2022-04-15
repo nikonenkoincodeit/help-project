@@ -4,6 +4,7 @@ firebase.initializeApp(firebaseConfig);
 const errorRef = $(".js-error");
 const heroRef = $(".js-hero");
 const heroTitleRef = $(".js-hero-title");
+const boxSpinierRef = $(".js-box-spinier");
 
 const HIDDEN_ELEM_CLASS = "hidden";
 const search = location.search;
@@ -16,16 +17,23 @@ if (search) {
     playersRef.on("value", (snapshot) => {
       data = snapshot.val();
       checkAnswer(data);
+      hideSpinier();
     });
   } catch (error) {
     removeClassElem(errorRef);
+    hideSpinier();
   }
 } else {
   removeClassElem(errorRef);
+  hideSpinier();
 }
 
 function removeClassElem(elem) {
   elem.removeClass(HIDDEN_ELEM_CLASS);
+}
+
+function hideSpinier() {
+  boxSpinierRef.fadeOut(100);
 }
 
 const alertRef = $(".js-alert");
@@ -41,11 +49,6 @@ const detailsRef = $(".js-details-input");
 const urlInputRef = $(".js-url-input");
 const href = location.href;
 
-console.log("location.href :>> ", location.href);
-console.log("location.host :>> ", location.host);
-console.log("location.hostname :>> ", location.hostname);
-console.log("location.pathname :>> ", location.pathname);
-
 function checkAnswer(data) {
   if (!data) return removeClassElem(errorRef);
   removeClassElem(mainSectionRef);
@@ -57,15 +60,21 @@ function checkAnswer(data) {
 }
 
 const copyDetailsRef = $(".js-copy-details");
+const alertTextRef = $(".js-alert-text");
 const copyUrlRef = $(".js-copy-url");
 
+const message1 = "Тепер ви можете поділитися ним у соцмережах.";
+const message2 = "Тепер ви можете зробити переказ за вірними реквізитами.";
+
 copyDetailsRef.on("click", () => {
+  alertTextRef.text(message2);
   alertRef.fadeIn(500);
   copyText(detailsRef);
   hideAlert();
 });
 
 copyUrlRef.on("click", () => {
+  alertTextRef.text(message1);
   alertRef.fadeIn(500);
   copyText(urlInputRef);
   hideAlert();
@@ -79,5 +88,5 @@ function copyText(elem) {
 function hideAlert() {
   setTimeout(() => {
     alertRef.fadeOut(500);
-  }, 1000);
+  }, 3000);
 }

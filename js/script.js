@@ -52,7 +52,10 @@ function checkForm() {
   return false;
 }
 
+const textInput = "Збираю на: ";
+
 function sendDataFirebase(data) {
+  data.reason_raise = data.reason_raise.replace(textInput, "");
   try {
     const playersRef = firebase.database().ref("events/");
 
@@ -65,3 +68,15 @@ function sendDataFirebase(data) {
     console.log(error);
   }
 }
+
+const reasonRaiseRef = $('[name="reason_raise"]');
+let flag = true;
+
+reasonRaiseRef.on("focus", () => {
+  if (!flag) return;
+  setTimeout(() => {
+    reasonRaiseRef.val(textInput);
+    reasonRaiseRef[0].selectionStart = textInput.length;
+  }, 50);
+  flag = false;
+});
