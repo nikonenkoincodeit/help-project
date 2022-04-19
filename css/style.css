@@ -9,6 +9,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+
 body {
   font-family: "Inter", sans-serif;
   background: #e5e5e5;
@@ -56,6 +57,22 @@ body {
   font-size: 12px;
   line-height: calc(15 / 12);
 }
+
+.logo-title {
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 10px;
+  color: var(--main-color);
+}
+
+.logo-title-color {
+  color: #ffc700;
+}
+
+.logo-img {
+  margin: 0 auto;
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 25px;
@@ -73,7 +90,7 @@ body {
   height: 20px;
   top: 0;
   right: -23px;
-  background: url(../img/svg/flag.svg) no-repeat center;
+  background: url(../img/flag.svg) no-repeat center;
 }
 
 .flag {
@@ -81,7 +98,7 @@ body {
   width: 20px;
   height: 20px;
   padding: 0 5px;
-  background: url(../img/svg/flag.svg) no-repeat center;
+  background: url(../img/flag.svg) no-repeat center;
 }
 
 .hero-text,
@@ -190,16 +207,14 @@ body {
   width: 80px;
   height: 80px;
   transform: translateX(-50%);
-  /* background: url(../img/svg/thoughtful-girl.svg) no-repeat center; */
-  background: url(../img/svg/g2113.svg) no-repeat center;
+  background: url(../img/thoughtful-girl.png) no-repeat center;
   background-size: cover;
 }
 
 .girl::after {
-  /* background: url(../img/girl-in-love.png) no-repeat center; */
   width: 90px;
   height: 90px;
-  background: url(../img/girl.png) no-repeat center;
+  background: url(../img/girl-in-love.png) no-repeat center;
   background-size: cover;
 }
 
@@ -376,7 +391,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../img/svg/close.svg) no-repeat center;
+  background: url(../img/close.svg) no-repeat center;
 }
 
 .error-style {
